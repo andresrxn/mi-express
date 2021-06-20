@@ -262,7 +262,6 @@ u {
     margin: 5px;
     margin-top: 20px;
     background: var(--celeste-medio);
-    padding: 15px;
     display: inline-block;
     text-align: center;
     border-radius: 15px;
@@ -272,6 +271,11 @@ u {
     color: var(--blanco-hueso);
     text-decoration: none;
     font-size: 1.7em;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    display: inline-block;
 }
 
 .panel-icon span {
@@ -1201,14 +1205,16 @@ footer {
         margin-top: 20px;
     }
     .panel-icon a {
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 15px;
         padding: 10px;
         font-size: 1.6em;
     }
-    .hour p {
+    .panel-icon a:active {
+        transform: scale(0.97);
+    }
+    .panel-icon a:hover {
+        opacity: 0.8;
+    }
+    .panel-icon .hour p {
         font-size: 1.2em;
     }
     main {
