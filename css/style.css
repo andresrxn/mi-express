@@ -47,8 +47,12 @@ section {
 
 .h1 {
     font-weight: 900;
-    font-size: 2.7em;
+    font-size: 2.3em;
     margin: 0;
+}
+
+.h1 span {
+    display: inline-block;
 }
 
 .h2 {
@@ -115,6 +119,11 @@ u {
 
 .more {
     color: var(--blanco-hueso);
+}
+
+.more a,
+.more-border a {
+    font-size: 0.8em;
 }
 
 .more-border {
@@ -200,7 +209,7 @@ u {
 .panel-title {
     width: 100%;
     text-align: center;
-    padding: 13px;
+    padding: 11px;
     background: var(--celeste-claro);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -301,14 +310,13 @@ u {
     justify-content: center;
     align-items: center;
     height: 50px;
-    background: #fff;
     transition: 0.3s ease;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 3000;
-    background: rgba(255, 255, 255);
-    box-shadow: 4px 10px 20px 6px rgba(0, 0, 0, 0.08);
+    background: var(--celeste-oscuro);
+    box-shadow: 4px 10px 20px 6px rgba(0, 0, 0, 0.15);
 }
 
 .header-container {
@@ -342,7 +350,7 @@ nav {
     width: 100%;
     height: calc(100vh - 50px);
     margin-top: 49px;
-    background: #fff;
+    background: var(--celeste-oscuro);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,30 +374,17 @@ nav ul {
     overflow: scroll;
 }
 
-nav ul li {
+nav ul .nav-links-li:not(:last-child) {
     margin: 22px auto;
+    padding: 5px 25px;
+    border-radius: 50px;
     list-style: none;
     opacity: 0;
-}
-
-.account {
-    padding-bottom: 30px;
-    margin-bottom: 0;
-    border-bottom: 3px solid var(--blanco-hueso);
-}
-
-.account a {
-    background: var(--naranja-oscuro-opacity);
-    padding: 7px 30px;
-    border-radius: 50px;
-}
-
-.account .icon {
-    margin-right: 7px;
+    background: #fff;
 }
 
 nav ul li a {
-    color: var(--naranja-oscuro);
+    color: var(--celeste-medio);
     font-size: 1.3em;
     font-weight: 700;
     text-decoration: none;
@@ -402,54 +397,53 @@ nav ul li a:active {
 }
 
 .social-nav {
+    opacity: 0;
+    list-style: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--celeste-medio);
+}
+
+.social-nav-span {
+    color: #ffffff80;
+    text-align: center;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 1.1em;
+    text-align: center;
     width: 100%;
 }
 
 .social-nav ul {
-    margin-left: 30px;
+    height: auto;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+}
+
+.social-nav ul li:first-child {
+    margin: 0;
+    padding: 0;
 }
 
 .social-nav a {
-    color: var(--blanco-hueso);
-    background: #082c4731;
     border-radius: 50px;
-    width: 100%;
-    padding: 5px 20px;
-    padding-left: 0;
-    color: var(--celeste-oscuro);
 }
 
 .social-nav .icon {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: #3b5998;
-    color: var(--blanco-hueso);
-    transform: scale(1.9);
-    padding-top: 7px;
-    margin-right: 15px;
-}
-
-.toggle .line1,
-.toggle .line2,
-.toggle .line3,
-.header-active .line1,
-.header-active .line2,
-.header-active .line3 {
-    background: var(--celeste-medio);
-}
-
-.header-active .line1,
-.header-active .line2,
-.header-active .line3 {
-    background: var(--celeste-medio);
+    background: var(--celeste-claro);
+    color: #fff;
+    padding-top: 10px;
 }
 
 .burger div {
     width: 31px;
     height: 3px;
     border-radius: 50px;
-    background: var(--celeste-medio);
+    background: #fff;
     margin: 5px;
     transition: all 0.3s ease;
     position: relative;
@@ -936,12 +930,18 @@ footer {
     opacity: 0.8;
 }
 
-.footer-contact .icon {
-    margin-right: 6px;
-}
-
 .footer-contact a span span {
     display: block;
+    color: var(--blanco-hueso);
+    font-style: italic;
+}
+
+.footer-contact .icon {
+    margin-right: 5px;
+}
+
+.footer-contact .footer-phone a:not(:last-child) {
+    margin-right: 10px;
 }
 
 .footer-copy {
@@ -952,6 +952,7 @@ footer {
     margin: auto;
     font-size: 0.8em;
     font-weight: 300;
+    opacity: 0.5;
 }
 
 
@@ -959,6 +960,11 @@ footer {
 
 .animated {
     opacity: 0;
+}
+
+.showRight {
+    opacity: 1;
+    animation: ShowRight 0.5s ease forwards;
 }
 
 .mostrarArriba {
@@ -1023,9 +1029,20 @@ footer {
     }
 }
 
+@keyframes ShowRight {
+    0% {
+        transform: translateX(-45px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @keyframes scale {
     0% {
-        transform: scale(0.5);
+        transform: scale(0.8);
         opacity: 0;
     }
     100% {
@@ -1084,12 +1101,30 @@ footer {
     }
 }
 
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 
 /*+++++++++++++++++++++++++++*/
 
 @media screen and (min-width:760px) {
     .h1 {
-        font-size: 2.85em;
+        font-size: 2.3em;
     }
     .h2 {
         font-size: 2.7em;
@@ -1145,6 +1180,10 @@ footer {
 }
 
 @media screen and (min-width:1000px) {
+    .more a,
+    .more-border a {
+        font-size: 1em;
+    }
     .more:hover,
     .more:focus {
         box-shadow: inset 0 -3.25em 0 0 var(--celeste-claro);
@@ -1236,6 +1275,7 @@ footer {
         background: none;
         z-index: inherit;
         transform: translate(0);
+        background: none;
     }
     nav ul {
         width: 100%;
@@ -1243,9 +1283,20 @@ footer {
         flex-direction: row;
         overflow: hidden;
     }
-    nav ul li {
-        margin: 0px 5px;
+    nav ul .nav-links-li:not(:last-child) {
+        margin: 0px 10px;
         opacity: 1;
+        font-size: 0.65em;
+        padding: 0;
+    }
+    nav ul li a {
+        height: 100%;
+        width: 100%;
+        border-radius: 50px;
+        padding: 4px 18px;
+    }
+    nav ul li a:hover {
+        background: #ededed;
     }
     .account {
         margin-left: 10px;
@@ -1262,17 +1313,6 @@ footer {
     }
     .social-nav {
         display: none;
-    }
-    nav ul li a {
-        font-size: 0.8em;
-        text-transform: none;
-        font-weight: 600;
-        padding: 6px 23px;
-        border-radius: 50px;
-        background: var(--naranja-oscuro-opacity);
-    }
-    nav ul li a:hover {
-        background: #e63d0a20;
     }
     .burger div {
         display: none;
@@ -1347,6 +1387,7 @@ footer {
     }
     .footer-logo {
         align-items: flex-start;
+        align-self: center;
     }
     .footer-logo img {
         margin-left: 20px;
@@ -1356,10 +1397,14 @@ footer {
     }
     .footer-content {
         flex-direction: row;
+        align-items: flex-start;
     }
     .footer-content a:hover {
         opacity: 1;
         color: var(--blanco-hueso);
+    }
+    .footer-content a:hover span {
+        opacity: 1;
     }
     .footer-logo,
     .footer-legal,
@@ -1367,15 +1412,22 @@ footer {
         height: 100%;
         border: 0;
         text-align: left;
+        margin: 0;
+    }
+    .footer-legal ul li a,
+    .footer-contact ul li a {
+        font-size: 0.9em;
+        line-height: 1;
+    }
+    .footer-contact a span span {
+        margin-left: 20px;
+        opacity: 0.7;
     }
     .footer-legal {
         padding-left: 15px;
     }
     .footer-contact {
         padding-left: 25px;
-    }
-    .footer-contact a span span {
-        margin-left: 20px;
     }
     .footer-copy {
         font-size: 1em;
@@ -1419,20 +1471,24 @@ footer {
     .header-logo img {
         width: 250px;
     }
-    nav ul li {
-        margin: 0px 7px;
+    nav ul .nav-links-li:not(:last-child) {
+        font-size: 0.8em;
+        margin: 0 13px;
     }
     nav ul li a {
-        font-size: 1em;
+        height: 100%;
+        width: 100%;
+        border-radius: 50px;
+        padding: 4px 23px;
     }
     .accordion {
         max-width: 950px;
     }
     main {
-        margin-bottom: -180px;
+        margin-bottom: -149px;
     }
     .footer-wave div {
-        height: 180px;
+        height: 150px;
     }
     .input-box label {
         font-size: 1.2em;
@@ -1454,5 +1510,13 @@ footer {
     .footer-logo img {
         transform: scale(1.35);
         margin-left: 30px;
+    }
+    .footer-legal ul li a,
+    .footer-contact ul li a {
+        font-size: 1em;
+        line-height: 1;
+    }
+    .footer-contact a span span {
+        line-height: 1.5;
     }
 }

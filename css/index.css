@@ -53,8 +53,48 @@
 }
 
 .banner-buttons {
-    margin-top: 30px;
+    margin-top: 15px;
 }
+
+.banner-buttons span {
+    font-size: 1.2em;
+    font-weight: 700;
+    opacity: 0.7;
+    padding-right: 30px;
+    padding-top: 15px;
+    display: inline-block;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.banner-button-container {
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+.banner-button {
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.05em;
+    margin-right: 10px;
+    background: var(--celeste-claro);
+}
+
+.banner-button .icon {
+    margin-right: 4px;
+}
+
+
+/* .banner-button.whatsapp {
+    background: #25D366;
+}
+
+.banner-button.messenger {
+    background: linear-gradient(to right, #0738da, #ca0bc1);
+} */
 
 .banner-buttons .more,
 .banner-buttons .more-border {
@@ -104,9 +144,11 @@
 }
 
 .step-des p {
+    width: 90%;
+    margin: auto;
     margin-top: 10px;
-    font-size: 1.2em;
-    font-weight: 600;
+    font-size: 1.1em;
+    font-weight: 500;
     line-height: 1.3;
     opacity: 0.7;
 }
@@ -118,6 +160,10 @@
 .step-arrow {
     text-align: center;
     padding: 25px 0;
+}
+
+.steps-container .last-arrow {
+    display: none;
 }
 
 .step-arrow .icon {
@@ -139,7 +185,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 4px 10px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 10px 40px rgba(255, 255, 255, 0.15);
     border-radius: 15px;
 }
 
@@ -164,6 +210,10 @@
     font-size: 1.1em;
 }
 
+.s-title .title-img {
+    display: none;
+}
+
 .s-img img {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -177,11 +227,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 45px;
 }
 
 .loc-restrictions p {
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .loc-img {
@@ -189,21 +240,8 @@
     margin: auto;
 }
 
-.restrictions {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    display: inline-block;
-    padding: 7px 20px;
-    border-radius: 50px;
-    background: var(--blanco-hueso);
-    font-weight: 600;
-    font-size: 0.8em;
-    color: rgba(0, 0, 0, 0.8);
-}
-
-.restrictions .icon {
-    opacity: 0.5;
-    margin-left: 5px;
+.loc-img img {
+    animation: floating 7s ease infinite;
 }
 
 .loc-title ul {
@@ -390,6 +428,9 @@
 }
 
 @media screen and (min-width:760px) {
+    .banner .h1 span {
+        display: block;
+    }
     .banner-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -398,11 +439,35 @@
     .banner-img {
         height: 100%;
     }
-    .banner-img img {
-        transform: scale(1.1);
+    .banner-button {
+        font-size: 1em;
     }
     .steps-container {
-        max-width: 500px;
+        max-width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .steps-container .last-arrow {
+        display: block;
+    }
+    .step-arrow {
+        transform: rotate(-90deg);
+        margin-bottom: 100px;
+    }
+    .step-card {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 140px;
+    }
+    .step-img img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 0%;
+        margin-bottom: 0;
     }
     .s-card {
         flex-direction: row;
@@ -428,18 +493,18 @@
         justify-content: center;
         order: 2;
     }
+    .s-img img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
     .s-img-2 {
         order: 1;
     }
     .s-title-2 {
         order: 2;
-    }
-    .s-img img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        border-radius: 0%;
-        margin-bottom: 0;
     }
     .loc-content {
         width: 90%;
@@ -488,33 +553,57 @@
         padding-top: 20px;
         overflow: hidden;
     }
+    .banner-img img {
+        transform: scale(1.1);
+    }
     .banner-container {
         padding-bottom: 20px;
+    }
+    .banner-button {
+        font-size: 1.15em;
+        padding: 10px 30px;
+        transition: transform 0.4s ease;
+    }
+    .banner-button.whatsapp:hover {
+        transform: scale(1.05);
+        background: #25D366;
+    }
+    .banner-button.messenger:hover {
+        transform: scale(1.05);
+        background: linear-gradient(to right, #03349e, #a605ac);
     }
     .steps,
     .solutions {
         padding: 80px 0;
     }
+    .steps .link {
+        margin-top: 20px;
+    }
     .steps-container {
         margin-top: 60px;
-        margin-bottom: 50px;
         max-width: 1300px;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .step-img img {
-        width: 70%;
-    }
     .step-des p {
-        font-size: 1.2em;
+        font-size: 1em;
         opacity: 0.7;
     }
-    .step-arrow .icon {
-        transform: rotate(0deg);
+    .step-arrow {
+        margin-bottom: 50px;
     }
     .step-card {
-        height: 280px;
+        width: 350px;
+        height: 350px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 50px;
+    }
+    .step-img img {
+        width: 270px;
+        height: 270px;
     }
     .s-card {
         max-width: 1600px;
@@ -524,7 +613,7 @@
     .s-title-2 {
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: flex-start;
         flex-direction: column;
     }
@@ -554,6 +643,21 @@
     .s-title p {
         margin: 30px 0;
         font-size: 1.3em;
+    }
+    .s-title .title-img {
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+        width: 100px;
+        display: block;
+    }
+    .s-title.s-title-2 .title-img {
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+        left: auto !important;
+        width: 100px;
+        display: block;
     }
     .loc-img {
         max-width: 650px;
@@ -610,6 +714,20 @@
 }
 
 @media screen and (min-width:1300px) {
+    .banner-buttons {
+        margin-top: 0;
+    }
+    .banner-buttons span {
+        margin-top: 25px;
+        padding-top: 25px;
+        padding-right: 40px;
+        font-size: 1.7em;
+        margin-bottom: 10px;
+    }
+    .banner-button {
+        font-size: 1.5em;
+        margin-right: 20px;
+    }
     .steps .link {
         margin-top: 130px;
     }
@@ -619,6 +737,23 @@
     }
     .steps-container {
         margin-bottom: 80px;
+        width: 95%;
+    }
+    .step-card {
+        width: 230px;
+    }
+    .step-des p {
+        font-size: 1em;
+    }
+    .step-arrow {
+        margin: 0;
+    }
+    .steps-container .last-arrow {
+        display: none;
+    }
+    .step-img img {
+        width: 95%;
+        object-fit: contain;
     }
     .s-card {
         height: 550px;
@@ -637,15 +772,15 @@
     .s-title p {
         font-size: 1.7em;
     }
-    .loc-content {}
+    .s-title .title-img,
+    .s-title.s-title-2 .title-img {
+        width: 150px;
+    }
     .loc-title ul li {
         padding: 15px 0;
         font-size: 1.2em;
         border-radius: 15px;
         width: 100%;
-    }
-    .loc-img img {
-        transform: scale(1.1);
     }
     .contact {
         padding-bottom: 200px;
