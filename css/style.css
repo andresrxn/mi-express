@@ -29,11 +29,9 @@ html {
 main {
     margin-top: 50px;
     margin-bottom: -65px;
-    overflow:hidden;
+    overflow: hidden;
 }
-body .wow{
-    visibility: hidden;
-}
+
 img,
 video {
     width: 100%;
