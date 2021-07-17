@@ -19,7 +19,7 @@
 body {
     font-family: 'Lato', sans-serif;
     position: relative;
-    overflow-x: hidden;
+   
 }
 
 html {
@@ -29,8 +29,10 @@ html {
 main {
     margin-top: 50px;
     margin-bottom: -65px;
+    overflow:hidden;
 }
-
+body .wow{
+    visibility: hidden;
 img,
 video {
     width: 100%;
