@@ -52,41 +52,6 @@
     margin-right: 10px;
 }
 
-.banner-buttons {
-    margin-top: 15px;
-}
-
-.banner-buttons span {
-    font-size: 1.2em;
-    font-weight: 700;
-    opacity: 0.7;
-    padding-right: 30px;
-    padding-top: 15px;
-    display: inline-block;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.banner-button-container {
-    display: flex;
-    justify-content: start;
-    margin-top: 15px;
-}
-
-.banner-button {
-    padding: 10px 25px;
-    border-radius: 50px;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1.05em;
-    margin-right: 10px;
-    background: var(--celeste-claro);
-}
-
-.banner-button .icon {
-    margin-right: 4px;
-}
-
 
 /* .banner-button.whatsapp {
     background: #25D366;
@@ -95,12 +60,6 @@
 .banner-button.messenger {
     background: linear-gradient(to right, #0738da, #ca0bc1);
 } */
-
-.banner-buttons .more,
-.banner-buttons .more-border {
-    margin-bottom: 10px;
-    margin-right: 15px;
-}
 
 .banner-img {
     display: flex;
@@ -115,7 +74,6 @@
 .steps,
 .solutions,
 .faq,
-.contact,
 .loc {
     padding: 65px 0;
 }
@@ -180,7 +138,7 @@
     width: 90%;
     margin: auto;
     max-width: 450px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,6 +166,14 @@
     margin: 25px 0;
     font-weight: 400;
     font-size: 1.1em;
+}
+
+.s-title .more-border {
+    background: #fff;
+}
+
+.s-title .more-border a {
+    color: var(--celeste-oscuro);
 }
 
 .s-title .title-img {
@@ -354,7 +320,7 @@
 }
 
 .counter {
-    font-size: 6em;
+    font-size: 5em;
     font-weight: 800;
     color: var(--blanco-hueso);
     position: relative;
@@ -388,7 +354,7 @@
     font-size: 1.35em;
     font-weight: 400;
     border-top: 2px solid rgba(0, 0, 0, 0.15);
-    width: 80%;
+    width: 70%;
     margin: auto;
     margin-top: 10px;
     padding-top: 10px;
@@ -396,35 +362,56 @@
 }
 
 .faq {
-    padding-bottom: 170px;
+    padding-bottom: 100px;
 }
 
 .contact {
     padding-bottom: 100px;
 }
 
-.contact-container {
+.contact-card {
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: var(--celeste-claro-opacity);
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-img {
+    height: 400px;
     width: 90%;
     margin: auto;
-    border-radius: 15px;
-    background: #fff;
-    box-shadow: 4px 10px 40px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: -110px;
+    margin-bottom: -50px;
+}
+
+.contact-title .more-border {
+    margin-top: 20px;
+}
+
+.contact-img img {
+    height: 100%;
+    width: 100%;
 }
 
 .contact-title {
-    background: var(--celeste-oscuro);
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    color: var(--blanco-hueso);
-    text-align: center;
-    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: var(--celeste-oscuro);
 }
 
-.contact-title p {
-    margin-top: 7px;
-    font-weight: 300;
+.contact-title h2 {
+    font-weight: 800;
 }
 
 @media screen and (min-width:760px) {
@@ -441,6 +428,21 @@
     }
     .banner-button {
         font-size: 1em;
+    }
+    .steps,
+    .solutions,
+    .faq,
+    .loc {
+        padding: 80px 0;
+    }
+    .faq {
+        padding-bottom: 100px;
+    }
+    .contact-container {
+        margin-top: -50px;
+    }
+    .steps .link {
+        margin-top: 0;
     }
     .steps-container {
         max-width: 80%;
@@ -537,7 +539,7 @@
         width: 100%;
         max-width: 100%;
     }
-    .contact h2 {
+    .contact-title h2 {
         font-size: 2em;
     }
     .contact-title {
@@ -545,6 +547,9 @@
     }
     .contact-title p {
         font-size: 1.3em;
+    }
+    .contact-card {
+        max-width: 570px;
     }
 }
 
@@ -554,7 +559,7 @@
         overflow: hidden;
     }
     .banner-img img {
-        transform: scale(1.1);
+        transform: scale(1.07);
     }
     .banner-container {
         padding-bottom: 20px;
@@ -564,16 +569,10 @@
         padding: 10px 30px;
         transition: transform 0.4s ease;
     }
-    .banner-button.whatsapp:hover {
-        transform: scale(1.05);
-        background: #25D366;
-    }
-    .banner-button.messenger:hover {
-        transform: scale(1.05);
-        background: linear-gradient(to right, #03349e, #a605ac);
-    }
     .steps,
-    .solutions {
+    .solutions,
+    .faq,
+    .loc {
         padding: 80px 0;
     }
     .steps .link {
@@ -644,6 +643,13 @@
         margin: 30px 0;
         font-size: 1.3em;
     }
+    .s-title .more-border:hover {
+        box-shadow: inset 0 -3.25em 0 0 var(--celeste-claro);
+        transform: translateY(-5px);
+    }
+    .s-title .more-border:hover a {
+        color: #fff;
+    }
     .s-title .title-img {
         position: absolute;
         bottom: 25px;
@@ -705,15 +711,31 @@
         max-width: 1200px;
         margin: auto;
     }
-    .faq {
-        padding-bottom: 170px;
+    .contact-card {
+        width: 80%;
+        max-width: 1200px;
+        flex-direction: row;
+        text-align: left;
     }
-    .contact-container {
-        top: -130px;
+    .contact-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-img img {
+        width: 70%;
     }
 }
 
 @media screen and (min-width:1300px) {
+    .flag-container {
+        font-size: 1.2em;
+        padding: 9px 20px;
+    }
+    .banner-img img {
+        transform: scale(1.1);
+        margin-top: 10px;
+    }
     .banner-buttons {
         margin-top: 0;
     }
@@ -729,24 +751,34 @@
         margin-right: 20px;
     }
     .steps .link {
-        margin-top: 130px;
+        margin-top: 20px;
     }
     .steps,
-    .solutions {
-        padding: 80px 0;
+    .solutions,
+    .faq,
+    .loc {
+        padding: 100px 0;
     }
     .steps-container {
-        margin-bottom: 80px;
+        margin-bottom: 20px;
         width: 95%;
     }
     .step-card {
-        width: 230px;
+        width: 215px;
     }
     .step-des p {
-        font-size: 1em;
+        font-size: 1.05em;
+        opacity: 0.6;
+        width: 100%;
+        font-weight: 500;
     }
     .step-arrow {
-        margin: 0;
+        margin: 5px;
+    }
+    .step-arrow .icon {
+        width: 50px;
+        height: 50px;
+        padding: 13px;
     }
     .steps-container .last-arrow {
         display: none;
@@ -757,6 +789,9 @@
     }
     .s-card {
         height: 550px;
+    }
+    .s-title {
+        padding: 50px;
     }
     .s-title::after {
         width: 300px;
@@ -774,7 +809,22 @@
     }
     .s-title .title-img,
     .s-title.s-title-2 .title-img {
-        width: 150px;
+        width: 120px;
+    }
+    .s-title .title-img {
+        left: 45px;
+        bottom: 45px;
+    }
+    .s-title.s-title-2 .title-img {
+        right: 45px;
+        bottom: 45px;
+        left: auto !important;
+    }
+    .about {
+        min-height: 90vh;
+    }
+    .counter {
+        font-size: 6em;
     }
     .loc-title ul li {
         padding: 15px 0;
@@ -785,10 +835,53 @@
     .contact {
         padding-bottom: 200px;
     }
+    .contact-title {
+        padding: 0;
+    }
+    .contact-card {
+        margin-top: 0;
+        padding: 60px;
+        width: 80%;
+        height: 480px;
+        max-width: 1100px;
+        flex-direction: row;
+        text-align: left;
+    }
     .contact h2 {
-        font-size: 2.5em;
+        font-size: 3em;
     }
     .contact-title p {
-        font-size: 1.5em;
+        font-size: 1.75em;
+    }
+    .contact-img {
+        height: 100%;
+        width: 60%;
+        margin-bottom: -40px;
+    }
+    .contact-img img {
+        width: 100%;
+        transform: scale(1.15);
+    }
+}
+
+@media screen and (min-width:1800px) {
+    .s-title {
+        padding: 70px;
+    }
+    .counter {
+        font-size: 7em;
+    }
+    .about {
+        min-height: 70vh;
+    }
+    .about::before {
+        height: 200px;
+    }
+    .title-counter span {
+        font-size: 2.5em;
+    }
+    .title-counter p {
+        font-size: 1.45em;
+        width: 70%;
     }
 }

@@ -19,7 +19,10 @@
 body {
     font-family: 'Lato', sans-serif;
     position: relative;
-   
+}
+
+body .wow {
+    visibility: hidden;
 }
 
 html {
@@ -50,10 +53,23 @@ section {
     font-weight: 900;
     font-size: 2.3em;
     margin: 0;
+    position: relative;
 }
 
 .h1 span {
     display: inline-block;
+}
+
+.h1.border::after {
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: var(--naranja-oscuro);
+    border-radius: 50px;
+    bottom: -25px;
+    left: 0;
+    position: absolute;
+    z-index: 400;
 }
 
 .h2 {
@@ -65,11 +81,15 @@ section {
 .h2-small {
     text-align: center;
     padding: 10px 0;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: 900;
     font-size: 1em;
     text-transform: uppercase;
     color: var(--naranja-oscuro);
+}
+
+.h2-small.left {
+    text-align: left;
 }
 
 .title-p {
@@ -128,12 +148,12 @@ u {
 }
 
 .more-border {
-    background: var(--blanco-hueso);
-    color: var(--celeste-oscuro);
+    background: var(--celeste-claro);
 }
 
 .more-border a {
-    color: var(--celeste-oscuro);
+    color: var(--blanco-hueso);
+    ;
 }
 
 .more:active,
@@ -162,10 +182,6 @@ u {
     transition: 0.2s ease;
     font-size: 0.8em;
     margin-left: 5px;
-}
-
-.link a:hover>.icon {
-    transform: translateX(5px);
 }
 
 .contact-panel {
@@ -316,8 +332,8 @@ u {
     top: 0;
     left: 0;
     z-index: 3000;
-    background: var(--celeste-oscuro);
-    box-shadow: 4px 10px 20px 6px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    box-shadow: 4px 5px 20px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -351,7 +367,7 @@ nav {
     width: 100%;
     height: calc(100vh - 50px);
     margin-top: 49px;
-    background: var(--celeste-oscuro);
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -376,12 +392,12 @@ nav ul {
 }
 
 nav ul .nav-links-li:not(:last-child) {
-    margin: 22px auto;
+    margin: 20px auto;
     padding: 5px 25px;
     border-radius: 50px;
     list-style: none;
     opacity: 0;
-    background: #fff;
+    background: var(--celeste-claro-opacity);
 }
 
 nav ul li a {
@@ -402,11 +418,12 @@ nav ul li a:active {
     list-style: none;
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid var(--celeste-medio);
+    border-top: 1px solid #77777740;
 }
 
 .social-nav-span {
-    color: #ffffff80;
+    color: #777777;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 15px;
     display: inline-block;
@@ -444,7 +461,7 @@ nav ul li a:active {
     width: 31px;
     height: 3px;
     border-radius: 50px;
-    background: #fff;
+    background: var(--celeste-oscuro);
     margin: 5px;
     transition: all 0.3s ease;
     position: relative;
@@ -453,6 +470,41 @@ nav ul li a:active {
 
 
 /*++++++++++++++++*/
+
+.banner-buttons {
+    margin-top: 15px;
+}
+
+.banner-buttons span {
+    font-size: 1.2em;
+    font-weight: 700;
+    opacity: 0.7;
+    padding-right: 30px;
+    padding-top: 15px;
+    display: inline-block;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.banner-button-container {
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+.banner-button {
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.05em;
+    margin-right: 10px;
+    background: var(--celeste-claro);
+}
+
+.banner-button .icon {
+    margin-right: 4px;
+}
 
 .accordion {
     width: 90%;
@@ -858,16 +910,30 @@ footer {
 .footer-logo ul li {
     margin: 0 5px;
     margin-top: 15px;
-    border-radius: 50%;
-    width: 40px;
-    padding: 0;
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40px;
+    padding: 0;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.footer-logo ul li a {
+    width: 100%;
+    height: 100%;
+    color: var(--celeste-oscuro);
     background: #fff;
-    font-size: 1.2em;
-    margin-right: -10px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo ul li a .icon {
+    pointer-events: none;
+    transition: 0.2s ease;
 }
 
 .footer-logo ul li:last-child {
@@ -876,14 +942,6 @@ footer {
     background: none;
     border-radius: 10px;
     margin-left: 0;
-}
-
-.footer-logo ul li a {
-    color: var(--celeste-oscuro);
-    font-size: 1.3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .footer-logo img {
@@ -935,6 +993,7 @@ footer {
     display: block;
     color: var(--blanco-hueso);
     font-style: italic;
+    opacity: 0.8;
 }
 
 .footer-contact .icon {
@@ -993,6 +1052,10 @@ footer {
     animation: opacity 1s ease forwards;
 }
 
+.showBox {
+    animation: showBox 3s ease forwards;
+}
+
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -1037,6 +1100,15 @@ footer {
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showBox {
+    0% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }
@@ -1120,6 +1192,24 @@ footer {
     }
 }
 
+@keyframes shadowColor {
+    0% {
+        box-shadow: 4px 10px 40px -4px rgba(255, 0, 0, 0.185);
+    }
+    25% {
+        box-shadow: 4px 10px 40px -4px rgba(237, 116, 116, 0.172);
+    }
+    50% {
+        box-shadow: 4px 10px 40px -4px rgba(34, 43, 173, 0.158);
+    }
+    75% {
+        box-shadow: 4px 10px 40px -4px rgba(36, 174, 228, 0.199);
+    }
+    100% {
+        box-shadow: 4px 10px 40px -4px rgba(31, 231, 214, 0.172);
+    }
+}
+
 
 /*+++++++++++++++++++++++++++*/
 
@@ -1187,15 +1277,16 @@ footer {
     }
     .more:hover,
     .more:focus {
-        box-shadow: inset 0 -3.25em 0 0 var(--celeste-claro);
+        box-shadow: inset 0 -3.25em 0 0 #fff;
     }
     .more-border:hover,
     .more-border:focus {
-        box-shadow: inset 0 -3.25em 0 0 var(--celeste-claro);
+        box-shadow: inset 0 -3.25em 0 0 #fff;
+        transform: translateY(-5px);
     }
     .more-border:hover a,
     .more-border:focus a {
-        color: var(--blanco-hueso);
+        color: var(--celeste-claro);
     }
     .h1 {
         font-size: 3em;
@@ -1212,6 +1303,12 @@ footer {
     .link a {
         font-size: 1.4em;
         padding: 8px 30px;
+    }
+    .link a:hover {
+        color: var(--celeste-medio);
+    }
+    .link a:hover>.icon {
+        transform: translateX(5px);
     }
     .contact-panel {
         left: auto;
@@ -1297,26 +1394,20 @@ footer {
         padding: 4px 18px;
     }
     nav ul li a:hover {
-        background: #ededed;
+        background: var(--celeste-medio);
+        color: #fff;
     }
-    .account {
-        margin-left: 10px;
-        padding-bottom: 0;
-        padding-left: 15px;
-        border-bottom: 0;
-        border-left: 3px solid var(--blanco-hueso);
-    }
-    .account .icon {
-        margin-right: 5px;
-    }
-    .account a {
-        font-weight: 700;
-    }
-    .social-nav {
-        display: none;
-    }
+    .social-nav,
     .burger div {
         display: none;
+    }
+    .banner-button.whatsapp:hover {
+        transform: scale(1.05);
+        background: #25D366;
+    }
+    .banner-button.messenger:hover {
+        transform: scale(1.05);
+        background: linear-gradient(to right, #03349e, #a605ac);
     }
     .accordion {
         max-width: 800px;
@@ -1407,6 +1498,9 @@ footer {
     .footer-content a:hover span {
         opacity: 1;
     }
+    .footer-logo ul li a:hover {
+        color: var(--celeste-medio);
+    }
     .footer-logo,
     .footer-legal,
     .footer-contact {
@@ -1469,23 +1563,23 @@ footer {
     .hour p {
         font-size: 1.1em;
     }
+    .header-container {
+        max-width: 1500px;
+    }
     .header-logo img {
         width: 250px;
     }
     nav ul .nav-links-li:not(:last-child) {
         font-size: 0.8em;
-        margin: 0 13px;
     }
     nav ul li a {
-        height: 100%;
-        width: 100%;
-        border-radius: 50px;
-        padding: 4px 23px;
+        padding: 5px 23px;
     }
     .accordion {
-        max-width: 950px;
+        max-width: 900px;
     }
     main {
+        margin-top: 65px;
         margin-bottom: -149px;
     }
     .footer-wave div {
@@ -1503,7 +1597,7 @@ footer {
         padding: 10px;
     }
     .footer-content {
-        max-width: 1250px;
+        max-width: 1400px;
     }
     .footer-logo {
         padding-left: 40px;
