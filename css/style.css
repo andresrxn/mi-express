@@ -33,6 +33,7 @@ main {
 }
 body .wow{
     visibility: hidden;
+}
 img,
 video {
     width: 100%;
