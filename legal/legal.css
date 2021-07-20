@@ -1,0 +1,155 @@
+:root {
+    --grisoscuro: #060301;
+    --naranja-oscuro: #e63d0a;
+    --naranja-oscuro-opacity: #e63d0a0b;
+    --celeste-claro: #0484BF;
+    --celeste-claro-opacity: #0484bf1e;
+    --celeste-oscuro: #082C47;
+    --celeste-medio: #215573;
+    --blanco-hueso: #f6f6f6;
+}
+
+.legal {
+    margin-top: 30px;
+    margin-bottom: 200px;
+}
+
+.legal-container,
+.legal-content {
+    width: 90%;
+    margin: auto;
+    max-width: 450px;
+}
+
+.legal-content {
+    margin-top: 60px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: opacity 1s 0.3s ease forwards;
+}
+
+.legal-content p {
+    margin: 15px 0;
+    opacity: 0.7;
+}
+
+.legal-content ul {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.legal-content ul li {
+    opacity: 0.7;
+}
+
+.legal-content ul li::marker {
+    color: var(--celeste-claro);
+}
+
+.legal-content h3 {
+    color: var(--celeste-oscuro);
+    margin: 10px 0;
+}
+
+.legal-content a {
+    color: var(--celeste-claro);
+}
+
+.legal-container .h1 span {
+    display: block;
+}
+
+.legal-content .last-change {
+    font-weight: 700;
+    opacity: 0.8;
+    margin-top: 50px;
+}
+
+.legal-container .h1 span:first-child {
+    opacity: 0;
+    animation: ShowRight 0.5s ease forwards;
+}
+
+.legal-container .h1 span:last-child {
+    opacity: 0;
+    animation: ShowRight 0.5s 0.2s ease forwards;
+}
+
+@media screen and (min-width:760px) {
+    .legal-container {
+        width: 90%;
+    }
+    .legal-container,
+    .legal-content {
+        max-width: 550px;
+    }
+    .legal-content {
+        font-size: 1.1em;
+    }
+    .legal-content h3 {
+        font-size: 1.5em;
+    }
+    .legal-container .h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .legal {
+        margin-top: 40px;
+    }
+    .legal-container {
+        width: 70%;
+        max-width: 900px;
+        margin-bottom: 0px;
+    }
+    .legal-content {
+        width: 70%;
+        max-width: 900px;
+        font-size: 1.3em;
+    }
+    .legal-container .h1 {
+        font-size: 4em;
+    }
+    .legal-content p {
+        margin: 25px 0;
+    }
+    .privacy .h1 span:last-child {
+        opacity: 0;
+        animation: ShowRight 0.5s 0s ease forwards;
+    }
+    .privacy .h1 span {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .legal {
+        margin-bottom: 350px;
+    }
+    .legal-container {
+        margin-bottom: 30px;
+    }
+    .legal-container .h1 {
+        font-size: 4.5em;
+    }
+    .legal-container {
+        width: 80%;
+        max-width: 1000px;
+    }
+    .legal-content {
+        width: 80%;
+        max-width: 1000px;
+        font-size: 1.5em;
+        line-height: 1.7;
+    }
+    .legal-content p {
+        margin: 35px 0;
+    }
+    .legal-content h3 {
+        font-size: 1.8em;
+        line-height: 1.2;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+}

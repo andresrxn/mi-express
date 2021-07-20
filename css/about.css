@@ -1,0 +1,472 @@
+:root {
+    --grisoscuro: #060301;
+    --naranja-oscuro: #e63d0a;
+    --naranja-oscuro-opacity: #e63d0a0b;
+    --celeste-claro: #0484BF;
+    --celeste-claro-opacity: #0484bf1e;
+    --celeste-oscuro: #082C47;
+    --celeste-medio: #215573;
+    --blanco-hueso: #f6f6f6;
+}
+
+.about-container {
+    position: relative;
+    max-width: 1350px;
+}
+
+.about-title {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    z-index: 400;
+}
+
+.about-title .h1 span:first-child {
+    opacity: 0;
+    animation: ShowRight 0.5s ease forwards;
+}
+
+.about-title .h1 span:last-child {
+    opacity: 0;
+    animation: ShowRight 0.5s 0.2s ease forwards;
+}
+
+.about-title .h1.border::after {
+    bottom: -20px;
+}
+
+.about-title p {
+    margin-top: 35px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.4em;
+    line-height: 1.4;
+    width: 90%;
+    opacity: 0;
+    animation: ShowRight 0.5s 0.4s ease forwards;
+}
+
+.about-img {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    max-width: 450px;
+    width: 90%;
+    opacity: 0;
+    animation: opacity 0.8s 0.4s ease forwards;
+}
+
+.about-title .h1 {
+    font-size: 2.5em;
+}
+
+.info {
+    padding: 50px 0;
+}
+
+.info-container,
+.goal-container {
+    width: 90%;
+    margin: auto;
+    max-width: 400px;
+}
+
+.info-card {
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 10px 40px -6px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    padding-top: 200px;
+    position: relative;
+}
+
+.info-card.mision {
+    background: url(../assets/trato.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.info-card.vision {
+    background: url(../assets/delivery-man-with-face-mask-carrying-parcel.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+.info-card:after {
+    content: "";
+    background: linear-gradient(to top, var(--celeste-oscuro), #082C4700);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.info-logo img {
+    width: 70px;
+}
+
+.info-logo {
+    margin-bottom: 30px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 400;
+}
+
+.info-card h3 {
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blanco-hueso);
+    z-index: 400;
+    position: relative;
+}
+
+.info-card p {
+    position: relative;
+    z-index: 400;
+    color: var(--blanco-hueso);
+    line-height: 1.4;
+}
+
+.goal-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.goal-icon {
+    text-align: center;
+    font-size: 3em;
+    color: var(--celeste-medio);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goal-icon img {
+    width: 65%;
+}
+
+.goal-container p {
+    text-align: center;
+    font-size: 1.7em;
+    line-height: 1.3;
+    font-weight: 900;
+}
+
+.goal-container span {
+    color: var(--naranja-oscuro);
+    display: inline-block;
+}
+
+.values {
+    background: var(--celeste-claro);
+    padding-top: 190px;
+    padding-bottom: 150px;
+}
+
+.values .h2-small {
+    color: var(--celeste-oscuro);
+    margin-top: -100px;
+    position: relative;
+    z-index: 400;
+}
+
+.values .title-p {
+    color: var(--blanco-hueso);
+    position: relative;
+    z-index: 400;
+}
+
+.values::before,
+.values::after {
+    content: "";
+    height: 180px;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 200;
+}
+
+.values::before {
+    top: -1px;
+    background: linear-gradient(to bottom, var(--blanco-hueso), #21557300);
+}
+
+.values::after {
+    bottom: -1px;
+    background: linear-gradient(to top, #fff, #21557300);
+}
+
+.values-container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.value-icon {
+    min-width: 60px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffffff15;
+    padding: 10px;
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+.value-des {
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+.services {
+    padding-top: 50px;
+    margin-bottom: 180px;
+}
+
+.services-container {
+    margin-bottom: 40px;
+}
+
+.contact {
+    padding-bottom: 100px;
+}
+
+.contact-card {
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: var(--celeste-claro-opacity);
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-img {
+    height: 400px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: -50px;
+}
+
+.contact-title .more-border {
+    margin-top: 20px;
+}
+
+.contact-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-container.productsSwiper {
+    height: 200px;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: visible;
+    margin-bottom: 30px;
+}
+
+.productsSwiper .swiper-slide {
+    background: var(--celeste-claro-opacity);
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 60%;
+    max-width: 270px;
+    transition: 0.8s ease;
+}
+
+.productsSwiper .swiper-slide .icon {
+    font-size: 2.5em;
+    color: var(--celeste-medio);
+}
+
+.productsSwiper .swiper-slide h3 {
+    margin-bottom: 5px;
+    margin-top: 13px;
+    font-size: 1.1em;
+    color: var(--celeste-oscuro);
+    font-weight: 800;
+}
+
+.productsSwiper .swiper-slide p {
+    color: var(--celeste-medio);
+}
+
+.productsSwiper .swiper-pagination {
+    transform: translateY(35px);
+}
+
+@media screen and (min-width:760px) {
+    .about-container {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        padding-top: 20px;
+        overflow: hidden;
+    }
+    .about-img img {
+        transform: scale(1.15);
+        margin-bottom: 20px;
+    }
+    .info-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 90%;
+        margin-top: 20px;
+    }
+    .goal-container {
+        max-width: 80%;
+    }
+    .goal-icon img {
+        width: 50%;
+    }
+    .goal-container p {
+        font-size: 2.1em;
+    }
+    .values-container {
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .about-title {
+        width: 55%;
+        order: 2;
+    }
+    .about-img {
+        width: 45%;
+        order: 1;
+    }
+    .about-title {
+        padding-top: 30px;
+        padding-left: 40px;
+    }
+    .about-title .h1 {
+        font-size: 3.55em;
+    }
+    .about-title p {
+        font-size: 1.75em;
+    }
+    .info-card {
+        padding-top: 270px;
+    }
+    .info-card h3 {
+        font-size: 2.3em;
+    }
+    .info-card p {
+        font-size: 1.15em;
+        line-height: 1.4;
+    }
+    .goal-icon {
+        margin-top: 100px;
+    }
+    .value p {
+        font-size: 1.15em;
+    }
+    .services {
+        margin-bottom: 290px;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .about-title {
+        padding-top: 30px;
+        padding-left: 40px;
+    }
+    .about-title .h1 {
+        font-size: 4.8em;
+    }
+    .about-title p {
+        font-size: 2em;
+        font-weight: 400;
+    }
+    .info-card {
+        padding-top: 300px;
+    }
+    .info-card h3 {
+        font-size: 2.7em;
+    }
+    .info-card p {
+        font-size: 1.25em;
+    }
+    .goal-icon {
+        font-size: 5em;
+    }
+    .goal-container p {
+        font-size: 2.9em;
+    }
+    .values {
+        padding-bottom: 190px;
+    }
+    .values-container {
+        max-width: 1100px;
+        margin-top: 90px;
+    }
+    .values::before,
+    .values::after {
+        height: 230px;
+    }
+    .value-icon {
+        min-width: 120px;
+        min-height: 120px;
+        font-size: 3.3em;
+    }
+    .value-des h3 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .value-des p {
+        font-size: 1.4em;
+    }
+    .swiper-container.productsSwiper {
+        height: 210px;
+    }
+    .productsSwiper .swiper-slide {
+        padding: 20px;
+        width: 60%;
+        max-width: 280px;
+        font-size: 1.2em;
+    }
+}

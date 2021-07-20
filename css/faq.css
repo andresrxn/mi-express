@@ -1,0 +1,91 @@
+:root {
+    --grisoscuro: #060301;
+    --naranja-oscuro: #e63d0a;
+    --naranja-oscuro-opacity: #e63d0a0b;
+    --celeste-claro: #0484BF;
+    --celeste-claro-opacity: #0484bf1e;
+    --celeste-oscuro: #082C47;
+    --celeste-medio: #215573;
+    --blanco-hueso: #f6f6f6;
+}
+
+.faq-container .h1 span:first-child {
+    opacity: 0;
+    animation: ShowRight 0.5s ease forwards;
+}
+
+.faq-container .h1 span:last-child {
+    opacity: 0;
+    animation: ShowRight 0.5s 0.2s ease forwards;
+}
+
+.faq {
+    padding-top: 20px;
+    margin-bottom: 200px;
+}
+
+.faq-container {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.faq-container .h2-small {
+    letter-spacing: 8px;
+}
+
+.accordion h3 {
+    font-size: 1.5em;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: var(--celeste-claro);
+    opacity: 0;
+    animation: opacity 0.5s 0.4s ease forwards;
+}
+
+.accordion {
+    opacity: 0;
+    animation: opacity 0.5s 0.4s ease forwards;
+}
+
+@media screen and (min-width:760px) {
+    .faq-container {
+        width: 80%;
+    }
+    .faq-container .h1 {
+        font-size: 2.7em;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .faq-container {
+        width: 80%;
+        max-width: 900px;
+        margin-bottom: 50px;
+    }
+    .faq-container .h1 {
+        font-size: 4em;
+    }
+    .accordion h3 {
+        font-size: 2.1em;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .faq-container {
+        margin-bottom: 120px;
+    }
+    .faq-container .h2-small {
+        font-size: 2em;
+    }
+    .faq-container .h1 {
+        font-size: 4.5em;
+    }
+    .accordion h3 {
+        font-size: 2.3em;
+    }
+    .faq {
+        margin-bottom: 300px;
+    }
+}

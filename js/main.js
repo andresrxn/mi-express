@@ -25,31 +25,3 @@ function navSlide() {
 }
 
 navSlide();
-
-let contactTitle = document.getElementById('contact-title');
-
-contactTitle.addEventListener('click', () => {
-    let contactPanel = document.getElementById('contact-panel');
-    contactPanel.classList.add('active');
-    let shadowPanel = document.getElementById('shadow-panel');
-    shadowPanel.classList.add('active');
-});
-
-
-
-
-const panelClose = document.getElementById('panel-close');
-
-panelClose.addEventListener('click', () => {
-    let contactPanel = document.getElementById('contact-panel');
-    contactPanel.classList.toggle('active');
-    let shadowPanel = document.getElementById('shadow-panel');
-    shadowPanel.classList.remove('active');
-});
-let shadowPanel = document.getElementById('shadow-panel');
-shadowPanel.addEventListener('click', () => {
-    let contactPanel = document.getElementById('contact-panel');
-    contactPanel.classList.toggle('active');
-    let shadowPanel = document.getElementById('shadow-panel');
-    shadowPanel.classList.remove('active');
-});
