@@ -21,10 +21,6 @@ body {
     position: relative;
 }
 
-body .wow {
-    visibility: hidden;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -1070,41 +1066,52 @@ footer {
 
 /*+++++++++++++++++++++++++++*/
 
-.animated {
+.opacity,
+.showRight,
+.popup,
+.scale,
+.mostrarArriba,
+.showBox {
     opacity: 0;
+    transition: all 0.7s ease forwards;
 }
 
-.showRight {
+.counterAnimated {
+    animation: opacity 0.7s ease forwards;
+}
+
+.showRight.animated {
     opacity: 1;
     animation: ShowRight 0.5s ease forwards;
 }
 
-.mostrarArriba {
+.mostrarArriba.animated {
     opacity: 1;
     animation: ShowUp 0.7s ease forwards;
 }
 
-.mostrarArriba2 {
+.mostrarArriba2.animated {
     opacity: 1;
     animation: ShowUp3 0.7s ease forwards;
 }
 
-.popup {
+.popup.animated {
     opacity: 1;
     animation: popup 0.7s ease forwards;
 }
 
-.scale {
+.scale.animated {
     opacity: 1;
     animation: scale 0.9s ease forwards;
 }
 
-.opacity {
+.opacity.animated {
     opacity: 1;
-    animation: opacity 1s ease forwards;
+    animation: opacity 0.7s ease forwards;
 }
 
-.showBox {
+.showBox.animated {
+    opacity: 1;
     animation: showBox 3s ease forwards;
 }
 

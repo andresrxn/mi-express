@@ -1,27 +1,48 @@
-const counters = document.querySelectorAll('.counter');
-// this could work for multiple counters
-counters.forEach(counter => {
-    // start with 0 by default
-    counter.innerText = '0';
+document.addEventListener('DOMContentLoaded', () => {
+    const contadores = document.querySelectorAll('.counter');
+    const vel = 1500;
 
-    const updateCounter = () => {
-        const target = +counter.getAttribute('data-target');
-        const c = +counter.innerText;
+    const animarContadores = () => {
+        for (const contador of contadores) {
 
-        // get the 0.1% to speed up things
-        const increment = target / 250;
 
-        if (c < target) {
-            counter.innerText = `${Math.ceil(c + increment)}`;
-            setTimeout(updateCounter, 1)
-        } else {
-            counter.innerText = target;
+            const actualizarContador = () => {
+
+                let cantidadMaxima = +contador.dataset.cantidadTotal,
+                    valorActual = +contador.innerText,
+                    incremento = cantidadMaxima / 500;
+
+                if (valorActual < cantidadMaxima) {
+                    contador.innerText = Math.ceil(valorActual + incremento);
+                    setTimeout(actualizarContador);
+                } else {
+                    contador.innerText = cantidadMaxima;
+                }
+            }
+            actualizarContador();
         }
-    };
 
-    updateCounter();
+    }
+    const mostrarContadores = elementos => {
+        elementos.forEach(elemento => {
+            if (elemento.isIntersecting) {
+                elemento.target.classList.add('counterAnimated');
+
+                setTimeout(animarContadores, 300)
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(mostrarContadores, {
+        threshold: 0.75
+    });
+
+    const elementosHTML = document.querySelectorAll('.counter-card');
+
+    elementosHTML.forEach(elementoHTML => {
+        observer.observe(elementoHTML);
+    });
 });
-
 
 
 
@@ -105,72 +126,72 @@ const validarText = (expresion, msg, campo) => {
     }
 }
 
-function showInp() {
-    let option = document.getElementById("sub").value;
-    if (option == "Solicitud de información") {
+// function showInp() {
+//     let option = document.getElementById("sub").value;
+//     if (option == "Solicitud de información") {
 
-        document.querySelector(".input-msg label").innerText = "¿Qué Información Necesitas?";
-    } else if (option == "Pregunta/Duda") {
-        document.querySelector(".input-msg label").innerText = "Déjanos saber tus interrogantes:";
-    } else if (option == "Comentario") {
-        document.querySelector(".input-msg label").innerText = "Haznos saber tu Comentario:";
-    } else if (option == "Queja") {
-        document.querySelector(".input-msg label").innerText = "Cuéntamos en qué podemos mejorar";
-    } else {
-        document.querySelector(".input-msg label").innerText = "Tu Mensaje";
-    }
+//         document.querySelector(".input-msg label").innerText = "¿Qué Información Necesitas?";
+//     } else if (option == "Pregunta/Duda") {
+//         document.querySelector(".input-msg label").innerText = "Déjanos saber tus interrogantes:";
+//     } else if (option == "Comentario") {
+//         document.querySelector(".input-msg label").innerText = "Haznos saber tu Comentario:";
+//     } else if (option == "Queja") {
+//         document.querySelector(".input-msg label").innerText = "Cuéntamos en qué podemos mejorar";
+//     } else {
+//         document.querySelector(".input-msg label").innerText = "Tu Mensaje";
+//     }
 
-}
-showInp();
+// }
+// showInp();
 
-let option = document.getElementById('sub');
-option.addEventListener('click', () => {
-    showInp();
-});
+// let option = document.getElementById('sub');
+// option.addEventListener('click', () => {
+//     showInp();
+// });
 
-option.addEventListener('DOMcontentLoaded', () => {
-    showInp();
-});
+// option.addEventListener('DOMcontentLoaded', () => {
+//     showInp();
+// });
 
-option.addEventListener('change', () => {
-    showInp();
-});
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-});
-msg.addEventListener('keyup', validarFormulario);
-msg.addEventListener('blur', validarFormulario);
+// option.addEventListener('change', () => {
+//     showInp();
+// // });
+// inputs.forEach((input) => {
+//     input.addEventListener('keyup', validarFormulario);
+//     input.addEventListener('blur', validarFormulario);
+// });
+// msg.addEventListener('keyup', validarFormulario);
+// msg.addEventListener('blur', validarFormulario);
 
-formulario.addEventListener('keyup', () => {
-    if (campos.name && campos.email && campos.msg && campos.phone) {
-        document.querySelector(`.input-submit .input-error`).style.display = "none";
-    }
-});
+// formulario.addEventListener('keyup', () => {
+//     if (campos.name && campos.email && campos.msg && campos.phone) {
+//         document.querySelector(`.input-submit .input-error`).style.display = "none";
+//     }
+// });
 
-let check = document.getElementById('check');
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-
-    if (campos.name && campos.email && campos.msg && campos.phone && check.checked) {
-        document.querySelector(`.input-submit .input-error`).style.display = "none"
-
-        form.submit();
-
-        let submit = document.getElementById('btnSubmit');
-        submit.value = "Enviando..."
-
-        return;
-
-    } else {
-        document.querySelector(`.input-submit .input-error`).style.display = "block";
+// let check = document.getElementById('check');
+// formulario.addEventListener('submit', (e) => {
+//     e.preventDefault();
 
 
-        setTimeout(() => {
-            document.querySelector(`.input-submit .input-error`).style.display = "none";
-        }, 4000);
-        return;
-    }
+//     if (campos.name && campos.email && campos.msg && campos.phone && check.checked) {
+//         document.querySelector(`.input-submit .input-error`).style.display = "none"
 
-});
+//         form.submit();
+
+//         let submit = document.getElementById('btnSubmit');
+//         submit.value = "Enviando..."
+
+//         return;
+
+//     } else {
+//         document.querySelector(`.input-submit .input-error`).style.display = "block";
+
+
+//         setTimeout(() => {
+//             document.querySelector(`.input-submit .input-error`).style.display = "none";
+//         }, 4000);
+//         return;
+//     }
+
+// });

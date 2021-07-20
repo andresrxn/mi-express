@@ -278,6 +278,7 @@
 
 .counter-card {
     margin-bottom: 55px;
+    opacity: 0;
 }
 
 .counter {
