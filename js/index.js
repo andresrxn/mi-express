@@ -1,48 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const contadores = document.querySelectorAll('.counter');
+const counters = document.querySelectorAll('.counter');
+// this could work for multiple counters
+counters.forEach(counter => {
+    // start with 0 by default
+    counter.innerText = '0';
 
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-cantidad-total');
+        const c = +counter.innerText;
 
-    const animarContadores = () => {
-        for (const contador of contadores) {
+        // get the 0.1% to speed up things
+        const increment = target / 250;
 
-
-            const actualizarContador = () => {
-
-                let cantidadMaxima = +contador.dataset.cantidadTotal,
-                    valorActual = +contador.innerText,
-                    incremento = cantidadMaxima / 4500;
-
-                if (valorActual < cantidadMaxima) {
-                    contador.innerText = Math.ceil(valorActual + incremento);
-                    setTimeout(actualizarContador);
-                } else {
-                    contador.innerText = cantidadMaxima;
-                }
-            }
-            actualizarContador();
+        if (c < target) {
+            counter.innerText = `${Math.ceil(c + increment)}`;
+            setTimeout(updateCounter, 1)
+        } else {
+            counter.innerText = target;
         }
+    };
 
-    }
-    const mostrarContadores = elementos => {
-        elementos.forEach(elemento => {
-            if (elemento.isIntersecting) {
-                animarContadores();
-            }
-        });
-    }
-
-    const observer = new IntersectionObserver(mostrarContadores, {
-        threshold: 0.95
-    });
-
-    const elementosHTML = document.querySelectorAll('.counter-card');
-
-    elementosHTML.forEach(elementoHTML => {
-        observer.observe(elementoHTML);
-    });
+    updateCounter();
 });
-
-
 
 const formulario = document.getElementById('form');
 const inputs = document.querySelectorAll('#form input');

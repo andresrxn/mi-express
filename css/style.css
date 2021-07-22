@@ -1097,6 +1097,11 @@ footer {
     animation: scale 0.9s ease forwards;
 }
 
+.wowOpacity {
+    opacity: 1;
+    animation: opacity 0.7s ease forwards;
+}
+
 .opacity.animated {
     opacity: 1;
     animation: opacity 0.7s ease forwards;
