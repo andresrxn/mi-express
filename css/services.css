@@ -1,0 +1,335 @@
+:root {
+    --grisoscuro: #060301;
+    --naranja-oscuro: #e63d0a;
+    --naranja-oscuro-opacity: #e63d0a0b;
+    --celeste-claro: #0484BF;
+    --celeste-claro-opacity: #0484bf1e;
+    --celeste-oscuro: #082C47;
+    --celeste-medio: #215573;
+    --blanco-hueso: #f6f6f6;
+}
+
+.services {
+    margin-top: 20px;
+    margin-bottom: 200px;
+    position: relative;
+}
+
+.services-container {
+    width: 90%;
+    margin: auto;
+}
+
+.services-content {
+    margin-top: 60px;
+}
+
+.service {
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+.service.individual img {
+    opacity: 0;
+    animation: opacity 0.7s 0.5s ease forwards;
+}
+
+.service.company {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 1px solid var(--celeste-claro-opacity);
+}
+
+.service.company .banner-button-container {
+    margin-top: 30px;
+}
+
+.service a {
+    transition: transform 0.3s ease;
+}
+
+.service-title h3 {
+    font-size: 1.7em;
+    margin: 10px 0;
+    color: var(--celeste-oscuro);
+}
+
+.service h4 {
+    font-size: 1.15em;
+    color: var(--celeste-oscuro);
+    margin-bottom: 25px;
+}
+
+.service ul {
+    margin-top: 15px;
+}
+
+.service ul li {
+    margin-bottom: 20px;
+    font-size: 1.15em;
+    background: var(--celeste-claro-opacity);
+    display: inline-block;
+    border-radius: 50px;
+    padding: 5px 20px;
+    color: var(--celeste-medio);
+}
+
+.service ul li::marker {
+    color: var(--celeste-medio);
+}
+
+.service p {
+    color: var(--celeste-medio);
+    margin-top: 10px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-size: 1.15em;
+}
+
+.service .last-p {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.service-img img {
+    border-radius: 10px;
+    box-shadow: 4px 10px 40px -6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.services-container .h1 span:first-child {
+    opacity: 0;
+    animation: ShowRight 0.5s ease forwards;
+}
+
+.services-container .h1 span:last-child {
+    opacity: 0;
+    animation: ShowRight 0.5s 0.2s ease forwards;
+}
+
+.stadistics {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.st-card {
+    width: 140px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 4px 10px 40px -6px rgba(0, 0, 0, 0.15);
+    height: 140px;
+    margin: 10px;
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.st-card>span {
+    text-align: center;
+    display: block;
+    color: var(--naranja-oscuro);
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.st-card p {
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #6d6d6d;
+}
+
+.st-card p span {
+    display: block;
+}
+
+.float-img {
+    display: none;
+}
+
+@media screen and (min-width:760px) {
+    .services-container {
+        width: 75%;
+    }
+    .services-container .h1 {
+        font-size: 3em;
+    }
+    .service {
+        max-width: 100%;
+    }
+    .service-img img {
+        max-height: 480px;
+        object-fit: cover;
+        object-position: 50% 20%;
+    }
+    .service ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .service h3 {
+        font-size: 2.2em;
+        font-weight: 800;
+    }
+    .service p {
+        font-size: 1.3em;
+    }
+    .stadistics {
+        margin-top: 20px;
+        margin-left: -10px;
+    }
+    .st-card p {
+        font-size: 1em;
+    }
+    .service ul li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .service .banner-button-container {
+        font-size: 1.1em;
+    }
+    .service.company {
+        border-top: 3px solid var(--celeste-claro-opacity);
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .services-container {
+        width: 70%;
+        max-width: 900px;
+        margin-bottom: 50px;
+    }
+    .services-container .h1 {
+        font-size: 4em;
+    }
+    .service ul li {
+        text-align: center;
+        font-size: 1.3em;
+        padding: 11px;
+    }
+    .service ul {
+        gap: 25px;
+    }
+    .service .banner-button-container {
+        font-size: 1.3em;
+    }
+    .service.company a:hover {
+        transform: scale(1.05);
+    }
+    .service h4,
+    .service p {
+        font-size: 1.3em;
+    }
+    .service h4 {
+        margin-top: 50px;
+        font-weight: 800;
+    }
+    .st-card {
+        width: 190px;
+        height: 190px;
+        margin-right: 20px;
+    }
+    .st-card>span {
+        font-size: 2.8em;
+    }
+    .float-img {
+        display: inline-block;
+        position: absolute;
+        z-index: 400;
+        width: 200px;
+    }
+    .float-img.fi {
+        top: 3%;
+        right: 0;
+        transform: translateX(53%) rotate(-25deg);
+    }
+    .float-img.se {
+        top: 15%;
+        left: 0;
+        transform: translateX(-53%) rotate(25deg);
+    }
+    .float-img.th {
+        top: 30%;
+        right: 0;
+        transform: translateX(53%) rotate(-25deg);
+    }
+    .float-img.fo {
+        top: 45%;
+        left: 0;
+        transform: translateX(-53%) rotate(25deg);
+    }
+    .float-img.fiv {
+        top: 60%;
+        right: 0;
+        transform: translateX(53%) rotate(-25deg);
+    }
+    .float-img.si {
+        top: 74%;
+        left: 0;
+        transform: translateX(-53%) rotate(25deg);
+    }
+    .float-img.sev {
+        top: 90%;
+        right: 0;
+        transform: translateX(53%) rotate(-25deg);
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .services {
+        margin-bottom: 250px;
+    }
+    .services-container {
+        margin-bottom: 120px;
+    }
+    .services-container .h2-small {
+        font-size: 1.6em;
+    }
+    .services-container .h1 {
+        font-size: 4.5em;
+    }
+    .service h3 {
+        font-size: 3.5em;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+    .service p,
+    .service h4 {
+        font-size: 1.7em;
+    }
+    .service ul {
+        margin-top: 40px;
+    }
+    .service ul li {
+        font-size: 1.5em;
+        padding: 13px;
+    }
+    .service .banner-button-container {
+        font-size: 1.5em;
+    }
+    .service a {
+        margin: 0 10px;
+    }
+    .stadistics {
+        margin-top: 40px;
+    }
+    .st-card {
+        width: 230px;
+        height: 230px;
+        margin-right: 20px;
+    }
+    .st-card>span {
+        font-size: 3.5em;
+    }
+    .st-card p {
+        font-size: 1.6em;
+    }
+    .float-img {
+        width: 280px;
+    }
+}

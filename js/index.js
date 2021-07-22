@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const contadores = document.querySelectorAll('.counter');
-    const vel = 1500;
+
 
     const animarContadores = () => {
         for (const contador of contadores) {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let cantidadMaxima = +contador.dataset.cantidadTotal,
                     valorActual = +contador.innerText,
-                    incremento = cantidadMaxima / 500;
+                    incremento = cantidadMaxima / 4500;
 
                 if (valorActual < cantidadMaxima) {
                     contador.innerText = Math.ceil(valorActual + incremento);
@@ -26,15 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const mostrarContadores = elementos => {
         elementos.forEach(elemento => {
             if (elemento.isIntersecting) {
-                elemento.target.classList.add('counterAnimated');
-
-                setTimeout(animarContadores, 300)
+                animarContadores();
             }
         });
     }
 
     const observer = new IntersectionObserver(mostrarContadores, {
-        threshold: 0.75
+        threshold: 0.95
     });
 
     const elementosHTML = document.querySelectorAll('.counter-card');

@@ -329,7 +329,7 @@ u {
     left: 0;
     z-index: 3000;
     background: #fff;
-    box-shadow: 4px 5px 20px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 5px 20px 6px rgba(0, 0, 0, 0.06);
 }
 
 .header-container {
@@ -385,10 +385,11 @@ nav ul {
     align-items: center;
     flex-direction: column;
     overflow: scroll;
+    margin-top: -20px;
 }
 
 nav ul .nav-links-li:not(:last-child) {
-    margin: 20px auto;
+    margin: 17px auto;
     padding: 5px 25px;
     border-radius: 50px;
     list-style: none;
@@ -433,6 +434,7 @@ nav ul li a:active {
     flex-direction: row;
     width: 100%;
     list-style: none;
+    margin-top: 0;
 }
 
 .social-nav ul li:first-child {
@@ -469,16 +471,6 @@ nav ul li a:active {
 
 .banner-buttons {
     margin-top: 15px;
-}
-
-.banner-buttons span {
-    font-size: 1.2em;
-    font-weight: 700;
-    opacity: 0.7;
-    padding-right: 30px;
-    padding-top: 15px;
-    display: inline-block;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .banner-button-container {
@@ -1486,6 +1478,7 @@ footer {
         height: 100%;
         flex-direction: row;
         overflow: hidden;
+        margin-top: 0;
     }
     nav ul .nav-links-li:not(:last-child) {
         margin: 0px 10px;

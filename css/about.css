@@ -344,7 +344,7 @@
     }
     .about-img img {
         transform: scale(1.15);
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     .info-container {
         display: grid;
@@ -399,6 +399,9 @@
         font-size: 1.15em;
         line-height: 1.4;
     }
+    .info-card.vision p {
+        font-size: 1.25em;
+    }
     .goal-icon {
         margin-top: 100px;
     }
@@ -429,7 +432,13 @@
         font-size: 2.7em;
     }
     .info-card p {
-        font-size: 1.25em;
+        font-size: 1.6em;
+    }
+    .info-card.vision {
+        padding-top: 340px;
+    }
+    .info-card.vision p {
+        font-size: 1.5em;
     }
     .goal-icon {
         font-size: 5em;

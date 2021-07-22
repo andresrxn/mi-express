@@ -25,7 +25,7 @@ main {
 }
 
 .contact-container .form {
-    padding-top: 55px;
+    padding-top: 65px;
     background: #fff;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -43,6 +43,10 @@ main {
 
 .contact-title h2 {
     font-weight: 800;
+}
+
+.contact-map {
+    background: var(--celeste-claro-opacity);
 }
 
 .contact-map iframe {
@@ -63,9 +67,9 @@ main {
     display: inline-block;
     background: #fff;
     font-size: 0.9em;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.4);
     bottom: -7px;
-    width: 65%;
+    width: 75%;
     max-width: 300px;
     text-align: center;
     left: 50%;
@@ -85,7 +89,7 @@ main {
     text-decoration: none;
     font-weight: 600;
     color: var(--celeste-oscuro);
-    box-shadow: 0px 3px 0px #0484BF40;
+    box-shadow: 0px 4px 0px #0484BF40;
 }
 
 .social-card a:active {

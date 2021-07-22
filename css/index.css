@@ -84,6 +84,16 @@
     animation: opacity 0.7s 0.8s ease forwards;
 }
 
+.banner-buttons span {
+    font-size: 1.1em;
+    font-weight: 700;
+    opacity: 0.7;
+    padding-right: 30px;
+    padding-top: 15px;
+    display: inline-block;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+
 .steps,
 .solutions,
 .faq,
@@ -278,7 +288,6 @@
 
 .counter-card {
     margin-bottom: 55px;
-    opacity: 0;
 }
 
 .counter {
@@ -577,14 +586,20 @@
     .contact-title {
         width: 55%;
     }
+    .contact-title h2 {
+        font-size: 2.2em;
+    }
     .contact-title p {
         line-height: 1.4;
+        margin-bottom: 30px;
     }
     .contact-img {
         width: 45%;
     }
     .contact-img img {
         width: 70%;
+        transform: scale(1.1);
+        margin-bottom: 10px;
     }
 }
 
@@ -601,11 +616,12 @@
         margin-top: 0;
     }
     .banner-buttons span {
-        margin-top: 25px;
-        padding-top: 25px;
-        padding-right: 40px;
-        font-size: 1.7em;
+        margin-top: 23px;
+        padding-top: 23px;
+        padding-right: 50px;
+        font-size: 1.5em;
         margin-bottom: 10px;
+        border-top: 3px solid rgba(0, 0, 0, 0.2);
     }
     .banner-button {
         font-size: 1.5em;
@@ -676,7 +692,7 @@
         text-align: left;
     }
     .contact h2 {
-        font-size: 3.5em;
+        font-size: 3.6em;
     }
     .contact-title p {
         font-size: 1.6em;
@@ -684,12 +700,11 @@
     }
     .contact-img {
         height: 100%;
-        width: 60%;
+        width: 50%;
         margin-bottom: -45px;
     }
     .contact-img img {
-        width: 60%;
-        transform: scale(1.2);
+        width: 70%;
     }
 }
 

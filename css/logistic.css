@@ -126,7 +126,8 @@
     text-align: center;
     background: var(--celeste-claro-opacity);
     border-radius: 15px;
-    padding: 20px;
+    padding: 25px;
+    padding-bottom: 35px;
 }
 
 .log-contact h2 {
@@ -145,11 +146,13 @@
 
 .log-contact .banner-button-container {
     justify-content: center;
+    margin-top: 25px;
 }
 
 .log-contact .banner-button {
-    font-size: 0.7em;
-    margin: 0 5px;
+    font-size: 0.8em;
+    transform: scale(1.07);
+    margin: 0 7px;
 }
 
 @media screen and (min-width:768px) {
@@ -189,61 +192,37 @@
     .content-des ul li {
         margin-bottom: 20px;
     }
-    .float-img {
-        display: inline-block;
+    .services-img {
+        display: block;
         position: absolute;
-        z-index: 400;
-        width: 220px;
     }
-    .float-img.fi {
-        top: 5%;
-        left: 0;
-        transform: translateX(-55%) rotate(20deg);
+    .services-img img {
+        width: 170px;
     }
-    .float-img.se {
-        top: 12%;
+    .services-img.one {
+        top: 3%;
         right: 0;
-        transform: translateX(55%) rotate(-20deg);
+        transform: translateX(42%) rotate(-7deg);
     }
-    .float-img.th {
-        top: 25%;
+    .services-img.two {
+        top: 19%;
         left: 0;
-        transform: translateX(-55%) rotate(20deg);
+        transform: translateX(-40%) rotate(5deg) rotateY(180deg);
     }
-    .float-img.fo {
-        top: 35%;
+    .services-img.three {
+        top: 40%;
         right: 0;
-        transform: translateX(55%) rotate(-20deg);
+        transform: translateX(42%) rotate(-7deg);
     }
-    .float-img.fiv {
-        top: 45%;
+    .services-img.four {
+        top: 56%;
         left: 0;
-        transform: translateX(-55%) rotate(20deg);
+        transform: translateX(-40%) rotate(5deg) rotateY(180deg);
     }
-    .float-img.si {
-        top: 50%;
+    .services-img.five {
+        top: 72%;
         right: 0;
-        transform: translateX(55%) rotate(-20deg);
-    }
-    .float-img.sev {
-        top: 65%;
-        left: 0;
-        transform: translateX(-55%) rotate(20deg);
-    }
-    .float-img.ei {
-        top: 75%;
-        right: 0;
-        transform: translateX(55%) rotate(-20deg);
-    }
-    .float-img.ni {
-        top: 85%;
-        left: 0;
-        transform: translateX(-55%) rotate(20deg);
-    }
-    .float-img.ten {
-        top: 95%;
-        right: 0;
-        transform: translateX(55%) rotate(-15deg);
+        transform: translateX(42%) rotate(-7deg);
     }
     .log-contact p {
         font-size: 1.1em;
@@ -292,6 +271,10 @@
     .log-contact .banner-button {
         font-size: 1em;
         transition: transform 0.3s ease;
+        margin: 0 10px;
+    }
+    .services-img img {
+        width: 220px;
     }
 }
 
@@ -338,7 +321,10 @@
         margin-bottom: 35px;
     }
     .log-contact .banner-button {
-        font-size: 1.3em;
-        margin: 0 10px;
+        font-size: 1.4em;
+        margin: 0 13px;
+    }
+    .services-img img {
+        width: 340px;
     }
 }

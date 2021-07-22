@@ -12,30 +12,30 @@
     <link rel="icon" href="assets/logos/logo-mi-express-isotipo.svg" type="image/x-icon" />
     <link rel="icon" href="assets/logos/logo-mi-express-isotipo.svg" type="image/x-icon" />
     <!--About-->
-    <title>Nosotros | Mi-Express</title>
+    <title>Servicios | Mi-Express</title>
     <meta name="author" content="Andrés Raxón">
     <meta name="keywords" content="mensajería, envío, repartidor, servicio, Guatemala">
-    <meta name="description" content="Este emprendimiento nace en gracias a la pandemia, con el fin de manejar toda la logística para aumentar su productividad.">
+    <meta name="description" content="Conoce todas nuestras soluciones para cubrir tus necesidades de envíos y mensajería.">
 
     <!--Styles-->
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/services.css">
 
     <link rel="stylesheet" href="css/normalize.min.css">
     <!--Social-->
     <meta property="og:url" content="https://andresrxn.github.io/miexpress/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Nosotros | Mi-Express" />
-    <meta property="og:description" content="Este emprendimiento nace en gracias a la pandemia, con el fin de manejar toda la logística para aumentar su productividad.">
+    <meta property="og:title" content="Servicios | Mi-Express" />
+    <meta property="og:description" content="Conoce todas nuestras soluciones para cubrir tus necesidades de envíos y mensajería.">
     <meta property="og:image" content="assets/logos/logo-mi-express.svg">
 
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="">
-    <meta name="twitter:title" content="Nosotros | Mi-Express">
-    <meta name="twitter:description" content="Este emprendimiento nace en gracias a la pandemia, con el fin de manejar toda la logística para aumentar su productividad.">
+    <meta name="twitter:title" content="Servicios | Mi-Express">
+    <meta name="twitter:description" content="Conoce todas nuestras soluciones para cubrir tus necesidades de envíos y mensajería.">
     <meta name="twitter:image" content="https://webslides.tv/static/images/share-netflix.jpg">
 
 
@@ -75,6 +75,7 @@
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0" nonce="N3DwiXh1"></script>
+
 
     <header>
         <div class="header" id="header">
@@ -137,113 +138,172 @@
         </div>
     </header>
 
+
+
+
     <main>
-        <section class="contact">
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1897.0003462773302!2d-90.51307009864588!3d14.637870510736175!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a216635330ad%3A0xd645f7fc445beb52!2s8A%20Avenida%2C%20Cdad.%20de%20Guatemala!5e0!3m2!1ses!2sgt!4v1626656489575!5m2!1ses!2sgt"
-                    style="border:0;" allowfullscreen="false"></iframe>
+        <section class="services">
+            <div class="services-container">
+                <div class="services-title">
+                    <h2 class="h2-small left">Servicios</h2>
+                    <div class="h1 border">
 
-
-            </div>
-            <div class="contact-container mostrarArriba">
-                <div class="contact-title">
-                    <h2>¿Más Información?</h2>
-                    <p>Será un gusto comunicarnos contigo.</p>
-                </div>
-                <div class="flex-container">
-                    <div class="social-container">
-
-                        <div class="social-card wa">
-                            <a href="https://api.whatsapp.com/send?phone=50247384915">
-                                <i class="fab fa-whatsapp icon"></i> +502 4738-4915
-                            </a>
-                        </div>
-                        <div class="social-card ms">
-                            <a href="https://m.me/LOGISTICAENMENSAJERIAYENVIOSDEMERCADERIA/">
-                                <i class="fab fa-facebook-messenger icon"></i> Facebook Messenger
-                            </a>
-
-                        </div>
-                        <div class="social-card ph">
-                            <a href="tel:50247384915" onClick="return(navigator.userAgent.match(/ Android | iPhone | mobile /i)) !=null;">
-                                <i class="fas fa-phone icon"></i> +502 2231-4616
-                            </a>
-                        </div>
-                        <div class="social-card em">
-                            <a href="mailto:contacto@miexpress.com">
-                                <i class="fas fa-envelope icon"></i> contacto@miexpress.com
-                            </a>
-                        </div>
-                        <p>o puedes llenar nuestro formulario</p>
+                        <span>Nosotros Hacemos</span>
+                        <span>El Trabajo por Ti</span>
                     </div>
-                    <form action="contact.php" method="POST" class="form" id="form">
-                        <div class="input-box input-name">
-                            <label for="name">Nombre(s) y Apellido(s)</label>
-                            <input type="text" id="name" name="name" autocomplete="off" minlength="6" maxlength="40">
-                            <p class="input-error">
-                                El nombre es muy corto
-                            </p>
-                        </div>
-                        <div class="input-box input-email">
-                            <label for="email">Correo Eléctronico</label>
-                            <input type="text" id="email" name="email" autocomplete="off">
-                            <p class="input-error">
-                                La dirección de correo es incorrecta.
-                            </p>
-                        </div>
-                        <div class="input-box input-phone">
-                            <label for="number">Teléfono </label>
-                            <input type="number" id="phone" name="phone" autocomplete="off" minlength="7" maxlength="20">
-                            <p class="input-error">
-                                El número telefónico es invalido.
-                            </p>
-                        </div>
-                        <div class="input-box input-select">
-                            <label for="subject">Asunto </label>
-                            <select name="subject" id="sub">
-                            <option value="Pregunta/Duda">Pregunta o Duda</option>
-                            <option value="Solicitud de información">Solicitar información</option>
-                            <option value="Solución Empresarial">Solución Empresarial</option>
-                            <option value="Comentario">Comentario</option>
-                            <option value="Queja">Queja</option> 
-                            <option value="Otro...">Otro...</option>
-                        </select>
-                            <p class="input-sub">
-                                <i class="fas fa-info-circle icon"></i> Nosotros te haremos saber que día tenemos disponible para atenderte.
-                            </p>
-                        </div>
-                        <div class="input-box input-msg">
-                            <label for="msg">Tu Mensaje</label>
-                            <textarea name="msg" id="msg" cols="30" rows="10" autocomplete="off" maxlength="400" minlength="10"></textarea>
-                            <p class="input-error">
-                                El mensaje debe contener de 10 a 400 caracteres.
-                            </p>
-                        </div>
-                        <div class="input-box input-terms">
+                </div>
+                <div class="services-content">
+                    <div class="service individual">
 
-                            <input class="inp-cbx" id="cbx" type="checkbox" style="display: none;" />
-                            <label class="cbx" for="cbx"><span>
-                            <svg width="12px" height="9px" viewbox="0 0 12 9">
-                              <polyline points="1 5 4 8 11 1"></polyline>
-                            </svg></span><span> He leído y estoy de acuerdo con la <a href="legal/politica-de-privacidad">Política de Privacidad</a> y los <a href="legal/terminos-y-condiciones">Términos y Condiciones de Uso.</a> </span></label>
+                        <div class="service-img ">
+                            <img src="assets/personal-delivery.jpg " alt="Repartidor de Mi-Express">
+                        </div>
+                        <div class="service-title">
+                            <h3>Servicio Individual</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis, porro dolores iure sed voluptates.</p>
+                        </div>
+                        <h4>Nuestros Beneficios</h4>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
 
+                        </ul>
+                        <div class="stadistics">
+                            <div class="st-card mostrarArriba">
+                                <span>250%</span>
+                                <p>
+                                    <span>En Rapidez</span>
+                                    <span>De Crecimiento</span>
+                                </p>
+                            </div>
+                            <div class="st-card mostrarArriba">
+                                <span>60%</span>
+                                <p>
+                                    <span>Más Rentable</span>
+                                    <span>Y Eficiente</span>
+                                </p>
+                            </div>
+                            <div class="st-card mostrarArriba">
+                                <span>100%</span>
+                                <p>
+                                    <span>Clientes</span>
+                                    <span>Satisfechos</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="last-p">Solicítalo por:</p>
+                        <div class="banner-button-container ">
+
+                            <a href="https://api.whatsapp.com/send?phone=50247384915" class="banner-button whatsapp ">
+
+                                <i class="fab fa-whatsapp icon "></i> WhatsApp
+                            </a>
+                            <a href="https://m.me/LOGISTICAENMENSAJERIAYENVIOSDEMERCADERIA/
+                            " class="banner-button messenger ">
+                                <i class="fab fa-facebook-messenger icon "></i> Messenger
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service company">
+
+                        <div class="service-img opacity">
+                            <img src="assets/bussines-delivery.jpg " alt="Repartidor de Mi-Express">
+                        </div>
+                        <div class="service-title">
+                            <h3>Servicio Empresarial</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis, porro dolores iure sed voluptates.</p>
+                        </div>
+                        <h4>Nuestros Beneficios</h4>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+
+                        </ul>
+                        <div class="stadistics">
+                            <div class="st-card mostrarArriba">
+                                <span>200%</span>
+                                <p>
+                                    <span>Aumento</span>
+                                    <span>Productivo</span>
+                                </p>
+                            </div>
+                            <div class="st-card mostrarArriba">
+                                <span>100%</span>
+                                <p>
+                                    <span>Seguridad</span>
+                                    <span>De Envío</span>
+                                </p>
+                            </div>
+                            <div class="st-card mostrarArriba">
+                                <span>70%</span>
+                                <p>
+                                    <span>Ahorro</span>
+                                    <span>De Tiempo</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="banner-button-container ">
+
+                            <a href="contacto" class="banner-button">
+
+                                <i class="fas fa-comment icon "></i> Contactar
+                            </a>
 
                         </div>
-                        <div class="input-submit">
-                            <input type="submit" value="Enviar" id="btnSubmit">
-                            <p class="input-error">
-                                <i class="fas fa-exclamation-triangle"></i> Complete correctamente los campos y seleccione la casilla.
-                            </p>
-
-
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
+            <div class="float-img fi opacity">
+                <img src="assets/caja.png" alt="">
+            </div>
+            <div class="float-img se opacity">
+                <img src="assets/caja.png" alt="">
+            </div>
+            <div class="float-img th opacity">
+                <img src="assets/caja.png" alt="">
+            </div>
+            <div class="float-img fo opacity">
+                <img src="assets/caja.png" alt="">
+            </div>
+            <div class="float-img fiv opacity">
+                <img src="assets/caja.png" alt="">
+            </div>
+            <div class="float-img si opacity">
+                <img src="assets/caja.png" alt="">
+            </div>
+            <div class="float-img sev opacity">
+                <img src="assets/caja.png" alt="">
+            </div>
 
-            </div>
-            </div>
+        </section>
     </main>
+
 
 
 
@@ -295,27 +355,27 @@
                         <li class="footer-phone">
                             <a href="https://api.whatsapp.com/send?phone=50247384915">
                                 <i class="fab fa-whatsapp icon"></i> <span>
-                              4738-4915
-                            </span>
+                                  4738-4915
+                                </span>
                             </a>
-                            <a href="https://api.whatsapp.com/send?phone=50247384915">
+                            <a href="tel:50247384915" onClick="return(navigator.userAgent.match(/ Android | iPhone | mobile /i)) !=null;">
                                 <i class="fas fa-phone icon"></i><span>
-                              2231-4616
-                            </span>
+                                  2231-4616
+                                </span>
                             </a>
 
                         </li>
                         <li>
-                            <a href="mailto:contacto@miexpress.com">
+                            <a href="mailto:contacto@miexpress.com.gt">
                                 <i class="fas fa-envelope icon"></i> <span>
-                                contacto@miexpress.com
-                            </span>
+                                    contacto@miexpress.com
+                                </span>
                             </a>
                         </li>
                         <li>
                             <a href="https://goo.gl/maps/W1SpUgNbAUQ2dqQs5">
                                 <i class="fas fa-map-marker-alt icon"></i> <span>
-                               8av. 20-09, Zona 1, Cuidad de Guatemala, <span>Oficina No. 9</span>
+                                   8av. 20-09, Zona 1, Cuidad de Guatemala, <span>Oficina No. 9</span>
                                 </span>
                             </a>
                         </li>
@@ -330,6 +390,7 @@
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
 
     <script src="js/main.js"></script>
 
