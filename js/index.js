@@ -1,8 +1,8 @@
-window.addEventListener('scroll', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 
     const contadores = document.querySelectorAll('.counter');
-    const velocidad = 5000;
+    const velocidad = 1000;
 
     const animarContadores = () => {
         for (const contador of contadores) {
@@ -13,7 +13,7 @@ window.addEventListener('scroll', () => {
 
                 if (valor_actual < cantidad_maxima) {
                     contador.innerHTML = Math.ceil(valor_actual + incremento)
-                    setTimeout(actualizar_contador, 500)
+                    setTimeout(actualizar_contador, 10)
                 } else {
                     contador.innerText = cantidad_maxima
                 }
