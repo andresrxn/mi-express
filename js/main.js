@@ -49,7 +49,7 @@ for (var i = 0; i < mostrarArribaElements.length; i++) { // create a scene for e
     new ScrollMagic.Scene({
             triggerElement: mostrarArribaElements[i], // 
             reverse: false,
-            triggerHook: 0.85,
+            triggerHook: 0.93,
         })
         .setClassToggle(mostrarArribaElements[i], "animated")
 
@@ -60,7 +60,7 @@ for (var i = 0; i < opacityElements.length; i++) { // create a scene for each el
     new ScrollMagic.Scene({
             triggerElement: opacityElements[i], // 
             reverse: false,
-            triggerHook: 0.85,
+            triggerHook: 0.93,
         })
         .setClassToggle(opacityElements[i], "animated")
 
@@ -71,7 +71,7 @@ for (var i = 0; i < popupElements.length; i++) { // create a scene for each elem
     new ScrollMagic.Scene({
             triggerElement: popupElements[i], // 
             reverse: false,
-            triggerHook: 0.85,
+            triggerHook: 0.93,
         })
         .setClassToggle(popupElements[i], "animated")
 

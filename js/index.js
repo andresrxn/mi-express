@@ -1,27 +1,44 @@
-const counters = document.querySelectorAll('.counter');
-// this could work for multiple counters
-counters.forEach(counter => {
-    // start with 0 by default
-    counter.innerText = '0';
+window.addEventListener('scroll', () => {
 
-    const updateCounter = () => {
-        const target = +counter.getAttribute('data-cantidad-total');
-        const c = +counter.innerText;
 
-        // get the 0.1% to speed up things
-        const increment = target / 250;
+    const contadores = document.querySelectorAll('.counter');
+    const velocidad = 5000;
 
-        if (c < target) {
-            counter.innerText = `${Math.ceil(c + increment)}`;
-            setTimeout(updateCounter, 1)
-        } else {
-            counter.innerText = target;
+    const animarContadores = () => {
+        for (const contador of contadores) {
+            const actualizar_contador = () => {
+                let = cantidad_maxima = +contador.dataset.cantidadTotal,
+                    valor_actual = +contador.innerText,
+                    incremento = cantidad_maxima / velocidad
+
+                if (valor_actual < cantidad_maxima) {
+                    contador.innerHTML = Math.ceil(valor_actual + incremento)
+                    setTimeout(actualizar_contador, 500)
+                } else {
+                    contador.innerText = cantidad_maxima
+                }
+            }
+            actualizar_contador();
         }
-    };
+    }
 
-    updateCounter();
+    const mostrarContadores = elementos => {
+        elementos.forEach(elemento => {
+            if (elemento.isIntersecting) {
+                setTimeout(animarContadores, 200)
+            }
+        });
+
+    }
+    const observerOne = new IntersectionObserver(mostrarContadores, {
+        threshold: 0.2
+    });
+
+    const counterCards = document.querySelectorAll('.counter-card');
+    counterCards.forEach(counterCard => {
+        observerOne.observe(counterCard);
+    });
 });
-
 const formulario = document.getElementById('form');
 const inputs = document.querySelectorAll('#form input');
 const msg = document.querySelector('#form textarea');

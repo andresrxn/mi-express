@@ -35,6 +35,10 @@
     margin-bottom: 40px;
 }
 
+.float-img {
+    display: none;
+}
+
 .content-number {
     flex: 1;
     display: flex;
@@ -144,6 +148,10 @@
     line-height: 1.4;
 }
 
+.log-contact p span {
+    display: block;
+}
+
 .log-contact .banner-button-container {
     justify-content: center;
     margin-top: 25px;
@@ -151,8 +159,9 @@
 
 .log-contact .banner-button {
     font-size: 0.8em;
-    transform: scale(1.07);
-    margin: 0 7px;
+    padding: 10px 15px;
+    transform: scale(1.06);
+    margin: 7px;
 }
 
 @media screen and (min-width:768px) {
@@ -225,10 +234,11 @@
         transform: translateX(42%) rotate(-7deg);
     }
     .log-contact p {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
     .log-contact .banner-button {
-        font-size: 0.9em;
+        font-size: 1em;
+        margin: 10px;
     }
 }
 
@@ -265,11 +275,12 @@
         width: 280px;
     }
     .log-contact p {
-        font-size: 1.2em;
+        font-size: 1.5em;
         width: 70%;
     }
     .log-contact .banner-button {
-        font-size: 1em;
+        font-size: 1.2em;
+        padding: 10px 25px;
         transition: transform 0.3s ease;
         margin: 0 10px;
     }
@@ -316,12 +327,12 @@
         border-radius: 20px;
     }
     .log-contact p {
-        font-size: 1.6em;
+        font-size: 1.8em;
         width: 70%;
         margin-bottom: 35px;
     }
     .log-contact .banner-button {
-        font-size: 1.4em;
+        font-size: 1.5em;
         margin: 0 13px;
     }
     .services-img img {

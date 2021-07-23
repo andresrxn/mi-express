@@ -297,7 +297,6 @@
     position: relative;
     text-align: center;
     display: inline-block;
-    opacity: 0;
 }
 
 .counter::after {
